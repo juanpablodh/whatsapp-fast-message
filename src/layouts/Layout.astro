@@ -10,10 +10,11 @@ const { title } = Astro.props;
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
+		<meta name="description" content="whatsapp fast message" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
+		<link href="https://fonts.cdnfonts.com/css/lg-gm205" rel="stylesheet">                
 		<title>{title}</title>
 	</head>
 	<body>
@@ -21,31 +22,57 @@ const { title } = Astro.props;
 	</body>
 </html>
 <style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
 	html {
 		font-family: system-ui, sans-serif;
-		background: #13151a;
 		background-size: 224px;
+		font-family: 'LG_Brio_ARB', sans-serif;                         
 	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
+	body {
+		width: 100%;
+		height: 100vh;
+		padding: 20px;
+		background: var(--color-background-gradient);
+		background-blend-mode: var(--background-blend-mode);
+		background-size: var(--background-size);
+		background-position: var(--background-position);
+	}
+	@media (prefers-color-scheme: dark) {
+		:root {
+			--color-text: #ffffff; 
+			--color-background-gradient: linear-gradient(224deg, #68f136 0%, #202c33 32%, #39988d 66%, rgba(57,186,190,1) 100%);
+			--color-background-gradient: radial-gradient(
+				  #075e54 40px,
+					transparent 0,
+					transparent 100%
+				),
+				radial-gradient(
+					#128c7e 40px,
+					transparent 0,
+					transparent 100%
+				),
+				radial-gradient(
+				  #25d366 40px,
+					transparent 0,
+					transparent 100%
+				), snow;
+			--background-blend-mode: multiply;
+			--background-size: 100px 100px;
+			--background-position: 0 0, 33px 33px, -33px -33px;
+			--color-image-background: url("../../public/darkBackground.png"); 
+		}
+	}
+	@media (prefers-color-scheme: light) {
+		:root {
+			--color-text: rgb(18, 18, 17); 
+			--color-background-gradient: linear-gradient(#68f136, transparent),
+        		linear-gradient(to top left, #202c33, transparent),
+        		linear-gradient(to top right, #39988d, transparent);
+			--background-blend-mode: screen;
+			--color-image-background: url("../../public/darkBackground.png");
+			--text-weight: bolder;
+		}
+	}
+	h1 {
+		color: var(--color-text);
 	}
 </style>
