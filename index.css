@@ -1,0 +1,61 @@
+/*estilos mobile first*/
+
+body{
+  font-family: arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+
+.container{
+  padding: 20px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.phone_input-container{
+  margin-bottom: 20px;
+}
+
+label{
+  display: block;
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
+select, input[type="tel"]{
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1 solid #ccc ;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+.error-message{
+  color: red;
+  font-size: 14px;
+  display: none;
+  margin-top: 5px;
+}
+
+input:invalid + .error-message{
+  display: block;
+}
+
+.whatsapp-btn{
+  background-color: #25D366;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;  
+}
+
+.whatsapp-btn:hover{
+  background-color: #128C7E;
+
+}
